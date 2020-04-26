@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>itProger tests</title>
-        
+        <meta charset="UTF-8">
         <!-- CSS -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css">
@@ -18,8 +19,6 @@
         <script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
         <script src="js/scripts.js" type="text/javascript"></script>
 
-
-        
     </head>
     
     
@@ -30,19 +29,20 @@
         <div class="preloader_hide">        
         <div class="fullscreen-bg">
             <div class="overlay">
+                <div class="columns">
+                    <p id="currTime">Текущее время</p>
+                </div>
 
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
-                            <a class="services_item" href="javascript:void(0);" >
+                    <h2>Первое задание</h2>
+                    <div class="col-lg-6 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+                         <a>
                                         <p><b>Умножение</b> чисел</p>
-                                        <span>Создайте форму с двумя текстовыми полями и кнопкой «Умножить».При нажатии на кнопку получите значения из полей и поместите результат умножение чисел в текстовую надпись с идентификатором «result».</span>
-                            </a>
-                        </div>                      
-                    </div>         
+                                        <p>Создайте форму с двумя текстовыми полями и кнопкой «Умножить».При нажатии на кнопку получите значения из полей и поместите результат умножение чисел в текстовую надпись с идентификатором «result».</p>
+                        </a>                            
                     
                     <div class="form-group">
-                      <label for="secondTxt" class="label label-default">Первый элемент</label>
+                      <label for="secondTxt" >Первый элемент</label>
                       <input type="text" class="form-control" id="firstTxt">
                     </div>
                     <div class="form-group">
@@ -50,29 +50,32 @@
                       <input type="text" class="form-control" id="secondTxt">
                     </div>
                     
-                    <button type="button" id="btnApply" class="btn btn-primary btn-lg">Произвести операцию</button>
+                    <button type="button" id="btnApply" class="btn btn-primary">Произвести операцию</button>
                     
-                    <label id="resultText"></label>
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-danger">Action</button>
-                      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
+                    <button type="button" id="btnClear" class="btn btn-primary">Очистить поля</button>
                         
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                      </div>
-                    </div>                  
-                    
+                    <div class="d-inline bg-success">
+                        <p  id="resultText">Результат</p>
+                    </div>
+                        </div> 
                 </div>  
                 
+                <div class="container">
+                    <div class="col-lg-6 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+                        <button type="button" id="btnShift" class="btn btn-primary">Текущее время</button>  
+                    </div>
+                </div>
                 
-
+                <div class="container">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 col-ss-8 margbot30">
+                        <button type="button" id="newWindow" class="btn btn-primary">Новое окно</button>  
+                    </div>
+                </div>
+                
+                
             </div>
+               
+            
                 <video loop="loop" muted="" autoplay="" poster="video/plane.jpg" class="fullscreen-bg__video">
                     <source src="video/plane.mp4" type="video/mp4">
                     <source src="video/plane.webm" type="video/webm">
