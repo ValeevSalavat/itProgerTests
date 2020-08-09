@@ -54,10 +54,25 @@ function senderAllPosition(){
       _items.eq(2).val()=="" || _itemsTextArea.eq(0).val()=="")
             {
                 $("#alarmer").html("Не все поля заполнены");
-                setTimeout(function(){
-                    $("#alarmer").show();
-                         setInterval(function(){$("#alarmer").toggle();},500)},3000);			
+                $("#alarmer").css({"color":"red"});
+                $("#alarmer").parent().fadeIn(1000).animate({
+                    opacity: 1.0,
+                    height: "30px",
+                    display:"toggle",
+               }, { duration: 1000, queue: false }, {});
             }
+        else {
+            $("#alarmer").html("");            
+            $("#alarmer").parent().fadeOut(500).animate({
+                opacity: 1.0,
+                height: "30px",
+                display:"toggle",
+           }, { duration: 1000, queue: false });
+        }
+        
+        
+    // if(_items.eq(2).val().indexOf('@')<0) $("#email").val("Это не e-mail. Введите корректный");
+    (_items.eq(2).val().indexOf('@')<0) ? console.log("It's okay") : $("#email").val("Это не  e-mail. Введите корректный");
             
     
 }
